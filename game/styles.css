@@ -1,0 +1,37 @@
+/* Ember Court — the page around the canvas. The game itself is painted on
+   the canvas; this file only makes the page fill the window, centres the
+   table, and keeps the screen-reader status line out of sight. */
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #0c0c14;
+}
+
+#game {
+  position: fixed;
+  inset: 0;
+  display: block;
+  touch-action: none;
+  cursor: pointer;
+}
+
+/* Read aloud, never shown: the status line screen readers announce. */
+#status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.noscript {
+  position: fixed;
+  inset: 40% 0 auto 0;
+  text-align: center;
+  color: #f7f0dd;
+  font: 18px Georgia, serif;
+}
